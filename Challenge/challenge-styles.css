@@ -1,0 +1,227 @@
+html {
+  --color-white-100: rgb(255, 242, 242);
+
+  --color-grey-200: rgb(163, 162, 162);
+  --color-grey-400: rgb(75, 73, 73);
+  --color-grey-700: rgb(35, 35, 35);
+
+  --color-primary-200: rgb(250, 181, 181);
+  --color-primary-500: rgb(212, 97, 97);
+  --color-primary-600: rgb(200, 78, 78);
+
+  --color-link: rgb(25, 153, 165);
+}
+
+body {
+  background-color: var(--color-primary-200);
+  font-family: "Roboto", sans-serif;
+  color: var(--color-grey-700);
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 30rem;
+  min-width: 10rem;
+  margin: 0 auto;
+  
+  color: whitesmoke;
+  font: inherit;
+
+  align-items: center;
+  justify-items: center;
+
+}
+
+#df1{
+  width: max-content;
+  height: fit-content;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  box-shadow: none;
+
+}
+
+#df1 button{
+  padding: 10px 15px;
+  margin: 0;
+  width: fit-content;
+  height: auto;
+
+  color: inherit;
+  font-size: 2em;
+  font-weight: bold;
+
+  background-color: rgb(150, 187, 190);
+  border: 1px solid rgb(150, 187, 190);
+  border-radius: 6px;
+}
+
+#df2 {
+  cursor: default;
+}
+
+#df1 button:hover {
+  background-color: var(--color-link);
+  border: 1px solid var(--color-link);
+  color: inherit;
+}
+
+h2 {
+  margin: 0.5rem 0 1rem 0;
+}
+
+span {
+  color: var(--color-primary-600);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+section{
+  padding: 0;
+}
+
+.folder {
+  position: relative;
+  padding: 0;
+  margin: 0;
+
+  top: -34px;
+  right: -264px;
+  width: 200px;
+  height: 32px;
+  background-color: var(--color-white-100);
+}
+
+.folder::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  height: 32px;
+  width: 40px;
+  
+  border-radius: 6px;  
+  
+  background: var(--color-white-100);
+
+  transform: skew(-25deg);
+  -webkit-transform: skew(-25deg);
+  -moz-transform: skew(-25deg);
+}
+
+.folder::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  height: 32px;
+  width: 40px;
+
+  border-radius: 6px;  
+
+  background: var(--color-white-100);
+  transform: skew(25deg);
+  -webkit-transform: skew(25deg);
+  -moz-transform: skew(25deg);
+}
+
+
+form {
+  width: 30rem;
+  background-color: var(--color-white-100);
+  padding: 10px;
+  margin: 1.5rem auto;
+  border-radius: 6px;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.3rem;
+  color: var(--color-grey-400);
+}
+
+input,
+textarea,
+select {
+  display: block;
+  font: inherit;
+  width: 100%;
+  box-sizing: border-box;
+
+  border: 1px solid var(--color-grey-400);
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem;
+
+  color: var(--color-grey-700);
+
+  /* resize only used for textarea */
+  resize: vertical;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid var(--color-primary-200);
+  color: var(--color-primary-500);
+  box-shadow: 0 0 0 3px var(--color-primary-200);
+}
+
+.form-reply-inline,
+.form-terms-inline {
+  display: flex;
+}
+
+.form-reply-inline input,
+.form-terms-inline input {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+.form-terms-inline {
+  margin-top: 0.7rem;
+}
+
+button {
+  width: 5.2rem;
+  height: 2.2rem;
+  margin: 0.5rem;
+  font: inherit;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+#btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#btn-reset {
+  background-color: transparent;
+  border: 1px solid var(--color-primary-200);
+  color: var(--color-grey-400);
+}
+
+#btn-reset:hover {
+  box-shadow: 0 0 0 3px var(--color-primary-200);
+}
+
+#btn-submit {
+  background-color: var(--color-primary-500);
+  border: 1px solid var(--color-primary-500);
+  color: whitesmoke;
+}
+#btn-submit:hover {
+  background-color: var(--color-primary-600);
+}

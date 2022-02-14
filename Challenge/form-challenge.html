@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- <link
+      rel="stylesheet"
+      href="/Day 26 - 29 Adding Forms To Websites/Challenge/challenge-styles.css"
+    /> -->
+    <link rel="stylesheet" href="../Challenge/challenge-styles.css" />
+
+    <title>Form Challenge</title>
+  </head>
+  <body>
+    <header>
+      <form id="df1" action="../index.html" method="get">
+        <button type="submit">Demo Form</button>
+      </form>
+      <h1 id="df2">Contact Form</h1>
+    </header>
+
+    <main>
+      <form
+      action="/Day 26 - 29 Adding Forms To Websites/Challenge/form-challenge.html"
+      method="GET"
+      >
+      <div class="folder"></div>
+      <div>
+      <section>
+        <div>
+          <h2>How can we help you?</h2>
+            <ul>
+              <li>
+                <label for="username">Your Name<span>*</span></label>
+                <input type="text" id="username" name="user-name" required />
+              </li>
+              <li>
+                <label for="useremail">Your E-mail Address<span>*</span></label>
+                <input type="email" id="useremail" name="user-email" required />
+              </li>
+              <li>
+                <label for="userphone">Your Phone Number<span>*</span></label>
+                <input
+                  type="tel"
+                  id="userphone"
+                  name="user-phone"
+                  minlength="5"
+                  maxlength="14"
+                  placeholder="011 222 3333"
+                  required
+                />
+              </li>
+              <li>
+                <label for="usermessage">Your Message<span>*</span></label>
+                <textarea
+                  name="user- message"
+                  id="usermessage"
+                  cols="30"
+                  rows="5"
+                  minlength="10"
+                  maxlength="500"
+                  required
+                ></textarea>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
+
+        <section>
+          <label for="channel">How did you find us?</label>
+          <select name="channel" id="channel">
+            <option value="web">Web search</option>
+            <option value="recommendation">Recommendation</option>
+            <option value="others">Others</option>
+          </select>
+        </section>
+
+        <section>
+          <h2>How should we reply?<span>*</span></h2>
+          <ul>
+            <li class="form-reply-inline">
+              <input
+                type="radio"
+                name="reply"
+                id="reply-phone"
+                value="phone"
+                required
+              />
+              <label for="reply-phone">Call me</label>
+            </li>
+            <li class="form-reply-inline">
+              <input
+                type="radio"
+                name="reply"
+                id="reply-email"
+                value="email"
+                required
+              />
+              <label for="reply-email">Send me an email</label>
+            </li>
+            <li class="form-reply-inline">
+              <input
+                type="radio"
+                name="reply"
+                id="reply-none"
+                value="none"
+                required
+              />
+              <label for="reply-none">Don't reply</label>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <div class="form-terms-inline">
+            <input type="checkbox" id="terms" name="terms" required />
+            <label for="terms">Accept Terms<span>*</span></label>
+          </div>
+        </section>
+
+        <section>
+          <div id="btn">
+            <button id="btn-reset" type="reset">Clear</button>
+            <button id="btn-submit" type="submit">Submit</button>
+          </div>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>
